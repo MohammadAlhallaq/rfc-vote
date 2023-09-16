@@ -1,4 +1,4 @@
-<div>
+<div {{dusk("vote-bar")}}>
     @if (!$voteType)
         <div class="mb-3 text-font tracking-wide flex gap-2 items-center justify-center">
             <x-icons.information-circle class="w-6 h-6" />
@@ -8,7 +8,7 @@
 
     <div class="flex shadow-lg font-bold rounded-full overflow-hidden p-1.5 lg:p-3 bg-vote-bar-background max-w-[1100px] mx-auto">
         {{-- Left (green) bar --}}
-        <div
+        <div {{dusk("vote-yes")}}
             @class([
                 'py-1.5 lg:py-3 px-6 flex-grow text-left md:min-w-[15%] min-w-[20%] rounded-l-full bg-gradient-to-r from-agree to-agree-light text-white hover:opacity-100',
                 'cursor-not-allowed opacity-100' => $hasVoted,
