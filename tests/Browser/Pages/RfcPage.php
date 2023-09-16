@@ -10,13 +10,12 @@ class RfcPage extends Page
 {
     public function __construct(
         readonly private Model $rfc
-    )
-    {
+    ) {
     }
 
     public function url(): string
     {
-        return "/rfc/" . $this->rfc->slug;
+        return '/rfc/'.$this->rfc->slug;
     }
 
     public function assert(Browser $browser): void

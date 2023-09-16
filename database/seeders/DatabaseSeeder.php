@@ -64,58 +64,58 @@ class DatabaseSeeder extends Seeder
 
             foreach ($users as $user) {
                 if (fake()->boolean(80)) {
-//                    $argument = (new CreateArgument())(
-//                        rfc: $rfc,
-//                        user: $user,
-//                        voteType: fake()->boolean(70) ? $majority : $minority,
-//                        body: fake()->paragraphs(fake()->numberBetween(1, 4), true),
-//                    );
+                    //                    $argument = (new CreateArgument())(
+                    //                        rfc: $rfc,
+                    //                        user: $user,
+                    //                        voteType: fake()->boolean(70) ? $majority : $minority,
+                    //                        body: fake()->paragraphs(fake()->numberBetween(1, 4), true),
+                    //                    );
 
-//                    $argumentCreatedDate = Carbon::now()->subMinutes(fake()->numberBetween(1, 60 * 24 * 14));
+                    //                    $argumentCreatedDate = Carbon::now()->subMinutes(fake()->numberBetween(1, 60 * 24 * 14));
 
-//                    $argument->update([
-//                        'created_at' => $argumentCreatedDate,
-//                        'updated_at' => $argumentCreatedDate,
-//                    ]);
+                    //                    $argument->update([
+                    //                        'created_at' => $argumentCreatedDate,
+                    //                        'updated_at' => $argumentCreatedDate,
+                    //                    ]);
 
-//                    $argumentVoteCount = fake()->numberBetween(0, 10);
+                    //                    $argumentVoteCount = fake()->numberBetween(0, 10);
 
-//                    if (fake()->boolean(25)) {
-//                        $argumentVoteCount = fake()->numberBetween(10, 30);
-//                    }
-//
-//                    if (fake()->boolean(5)) {
-//                        $argumentVoteCount = fake()->numberBetween(30, 50);
-//                    }
+                    //                    if (fake()->boolean(25)) {
+                    //                        $argumentVoteCount = fake()->numberBetween(10, 30);
+                    //                    }
+                    //
+                    //                    if (fake()->boolean(5)) {
+                    //                        $argumentVoteCount = fake()->numberBetween(30, 50);
+                    //                    }
 
-//                    ArgumentVote::factory()
-//                        ->count($argumentVoteCount)
-//                        ->state(new Sequence(
-//                            fn (Sequence $sequence) => [
-//                                'argument_id' => $argument->id,
-//                                'user_id' => $users->random()->id,
-//                            ]
-//                        ))
-//                        ->create();
+                    //                    ArgumentVote::factory()
+                    //                        ->count($argumentVoteCount)
+                    //                        ->state(new Sequence(
+                    //                            fn (Sequence $sequence) => [
+                    //                                'argument_id' => $argument->id,
+                    //                                'user_id' => $users->random()->id,
+                    //                            ]
+                    //                        ))
+                    //                        ->create();
 
-//                    ArgumentComment::factory()->count(fake()->numberBetween(0, 5))
-//                        ->sequence(
-//                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
-//                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
-//                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
-//                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
-//                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
-//                        )
-//                        ->create();
+                    //                    ArgumentComment::factory()->count(fake()->numberBetween(0, 5))
+                    //                        ->sequence(
+                    //                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
+                    //                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
+                    //                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
+                    //                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
+                    //                            ['argument_id' => $argument->id, 'user_id' => $users->random()->id],
+                    //                        )
+                    //                        ->create();
                 }
             }
         }
 
-//        Argument::get()
-//            ->each(function (Argument $argument): void {
-//                $argument->update([
-//                    'vote_count' => $argument->votes()->count(),
-//                ]);
-//            });
+        //        Argument::get()
+        //            ->each(function (Argument $argument): void {
+        //                $argument->update([
+        //                    'vote_count' => $argument->votes()->count(),
+        //                ]);
+        //            });
     }
 }
